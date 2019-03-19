@@ -11,15 +11,40 @@ planes:  informations de construction de chaque avion
 airports: noms et emplacements des aéroports
 airlines: noms et codes IATA des compagnies aériennes (les codes AITA ou IATA des compagnies aériennes sont des codes à deux lettres, attribués par l'Association internationale du transport aérien.
 
-Plan du projet
-
-Création de la BD SQL : nycflights13-schema et nycflights13-data
-Certains pb rencontrés sur les CSV : doublons, NA, données incohérentes, ce qui posent des problèmes avec les clés primaires et étrangères.
-
-Packages à installer sur Rstudio:
+# Packages à installer sur Rstudio:
 
 install.packages("tidyverse")
 install.packages("ggplot2")
+library(nycflights13)
+
+# Plan du projet
+
+- Télécharger les rda :
+        - flights.rda
+        - airlines.rda
+        - airports.rda
+        - planes.rda
+        - weather.rda
+- Convertir les fichiers au format csv:
+
+write_csv(flights, "flights.csv")
+
+write_csv(airports, "airports.csv")
+
+write_csv(airlines,"airlines.csv")
+
+write_csv(planes,"planes.csv")
+
+write_csv(weather, "weather.csv")
+
+
+- Création de la BD SQL : nycflights13-schema et nycflights13-data
+
+- Problématique rencontrés sur les CSV : doublons, NA, données incohérentes, ce qui posent des problèmes avec les clés primaires et étrangères.
+
+
+
+
 
 
 
